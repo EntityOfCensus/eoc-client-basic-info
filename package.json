@@ -2,6 +2,9 @@
 	"name": "cloudflare-workers-openapi",
 	"version": "0.0.1",
 	"private": true,
+	"prisma": {
+		"seed": "node prisma/seed.js"
+	},
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
@@ -9,12 +12,22 @@
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
-		"@cloudflare/itty-router-openapi": "^1.0.1"
+		"@cloudflare/itty-router-openapi": "^1.0.1",
+		"@emotion/react": "^11.11.4",
+		"@emotion/styled": "^11.11.5",
+		"@mui/icons-material": "^5.15.19",
+		"@mui/material": "^5.15.19",
+		"@prisma/client": "^5.14.0",
+		"@tanstack/react-table": "^8.17.3",
+		"react": "^18.3.1",
+		"react-table": "^7.8.0",
+		"zod": "^3.23.8"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20240529.0",
 		"@types/node": "^20.5.7",
 		"@types/service-worker-mock": "^2.0.1",
+		"prisma": "^5.14.0",
 		"wrangler": "^3.0.0"
 	}
 }
