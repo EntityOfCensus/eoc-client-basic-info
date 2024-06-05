@@ -4,7 +4,8 @@ datasource db {
 }
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
 }
 
 model ClientProfile {
@@ -12,7 +13,7 @@ model ClientProfile {
   name      String
   email     String   @unique
   address   String?
-  contacts  Contact[] 
+  contacts  Contact[]
 }
 
 model Contact {
